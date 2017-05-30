@@ -63,9 +63,6 @@ namespace App2
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050005
-			public const int button1 = 2131034117;
-			
 			// aapt resource value: 0x7f050002
 			public const int editText1 = 2131034114;
 			

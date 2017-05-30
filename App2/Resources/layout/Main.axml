@@ -19,11 +19,6 @@
         android:gravity="center"
         android:layout_height="wrap_content"
         android:id="@+id/initText" />
-    <Button
-        android:text="Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/button1" />
     <Space
         android:layout_width="match_parent"
         android:layout_height="0px"
