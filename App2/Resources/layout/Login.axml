@@ -6,39 +6,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/linearLayout1"
-    android:background="@drawable/metal">
-    <TextView
-        android:text="PRIHLASENIE"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+    android:background="#fff">
+    <Space
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView1"
-        android:gravity="center"
-        android:layout_marginTop="20dp"
-        android:textSize="40"
-        android:textColor="#000" />
-    <EditText
-        android:inputType="textPersonName"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText1"
-        android:hint="Prihlasovacie meno"
+        android:layout_height="0px"
+        android:layout_weight="0.3" />
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_marginTop="100dp"
-        android:gravity="center" />
-    <EditText
-        android:inputType="textPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText2"
-        android:layout_marginTop="20dp"
-        android:hint="Heslo"
-        android:textAlignment="center"
-        android:gravity="center" />
-    <Button
-        android:text="Prihlasit"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/btLogin"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="120dp" />
+        android:layout_height="0px"
+        android:layout_weight="0.7">
+        <TextView
+            android:text="Prihlásenie"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:paddingTop="30dp"
+            android:textSize="20pt"
+            android:textColor="#000" />
+        <EditText
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText2"
+            android:layout_marginTop="20dp"
+            android:hint="Heslo"
+            android:textColor="#B9B4B4"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="sdadasd" />
+        <Button
+            android:text="Prihlásiť"
+            android:background="#E53A34"
+            android:gravity="center"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btLogin"
+            android:layout_marginTop="20dp" />
+    </LinearLayout>
 </LinearLayout>

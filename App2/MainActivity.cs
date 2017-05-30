@@ -45,8 +45,20 @@ namespace App2
                 return false;
             });
             await connection;
-            // po pripojeni na server prepni view
-            await connection.ContinueWith((x) => {
+            // po pripojeni na server sparsuj data
+            var parse = connection.ContinueWith((isConnected) => {
+                if (isConnected.Result == false)
+                {
+                    //Error
+                    return false;
+                }
+
+                
+
+                return true; //dummy
+            });
+            // po sparsovani prepni view
+            await parse.ContinueWith((x) => {
                 if (x.Result == false) {
                     //Error
                     return;

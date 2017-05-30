@@ -12,13 +12,9 @@ using Android.Widget;
 
 namespace App2
 {
-    interface IConnection
+    class State
     {
-
-        bool Connect();
-        void WriteData(string data);
-        string ReadData();
-        void Hello();
-        void Close();
+        private bool okna { get; set; }
+        private bool rolety { get; set; }
     }
 }

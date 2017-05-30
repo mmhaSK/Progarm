@@ -17,9 +17,8 @@ namespace App2
     class ConnectionManager : IConnection
     {
         readonly int telnet_port = 23456;
-        const string server_ip = "192.168.0.16";
-        private StreamWriter writer;
-        private StreamReader reader;
+        const string server_ip = "192.168.0.100";
+        private NetworkStream stream;
         private static ConnectionManager manager = new ConnectionManager();
         private ConnectionManager() {}
 
@@ -32,24 +31,23 @@ namespace App2
             try
             {
                 TcpClient connection = new TcpClient(server_ip, telnet_port);
+                Console.WriteLine("Pripojene " + connection.ToString());
                 // po 10 sekundach vyhodi chybu
                 connection.ReceiveTimeout = 10000;
                 //vrati stream socketu
-                NetworkStream stream = connection.GetStream();
-                writer = new StreamWriter(stream);
-                reader = new StreamReader(stream);
+                stream = connection.GetStream();
                 return true;
             }
             catch (Exception) {
-                reader = null;
-                writer = null;
+                stream = null;
                 return false;
             }
         }
 
         public void WriteData(string data)
         {
-            writer.WriteLine(data);
+            byte[] messageBytes = Encoding.ASCII.GetBytes(data);
+            stream.Write(messageBytes, 0, messageBytes.Length);
         }
 
         public string ReadData()
@@ -57,7 +55,9 @@ namespace App2
             // ak sa po nastavenej dobe neprimu data vyhodi chybu
             try
             {
-                return reader.ReadToEnd();
+                byte[] buffer = new byte[1024];
+                stream.Read(buffer, 0, 1024);
+                return System.Text.Encoding.UTF8.GetString(buffer);
             }
             catch (IOException) {
                 //reconnect v nadradenej metode
@@ -68,6 +68,11 @@ namespace App2
         public void Hello()
         {
             WriteData("Hello packet");
+        }
+
+        public void Close()
+        {
+            stream.Close();
         }
     }
 }
