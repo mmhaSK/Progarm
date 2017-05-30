@@ -5,15 +5,18 @@
     android:minHeight="25px"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/linearLayout1">
+    android:id="@+id/linearLayout1"
+    android:background="@drawable/metal">
     <TextView
-        android:text="Authentification"
+        android:text="PRIHLASENIE"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:id="@+id/textView1"
         android:gravity="center"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:textSize="40"
+        android:textColor="#000" />
     <EditText
         android:inputType="textPersonName"
         android:layout_height="wrap_content"
@@ -31,4 +34,11 @@
         android:hint="Heslo"
         android:textAlignment="center"
         android:gravity="center" />
+    <Button
+        android:text="Prihlasit"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btLogin"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="120dp" />
 </LinearLayout>

@@ -19,11 +19,6 @@ namespace App2
 
         }
 
-
-
-        public void zmenaTest() {
-
-        }
         async void DoWorkAsync()
         {
             await Task.Delay(5000);
