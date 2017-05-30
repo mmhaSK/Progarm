@@ -3,25 +3,29 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-
-  <Space
-      android:layout_width="match_parent"
-      android:layout_height="0px"
-      android:layout_weight="20" />
-  <ImageView
-      android:src="@drawable/tatras_logo"
-      android:layout_width="match_parent"
-      android:layout_height="0px"
-      android:layout_weight="30" />
-  <TextView
-      android:text="Pripaja sa..."
-      android:textAppearance="?android:attr/textAppearanceMedium"
-      android:layout_width="match_parent"
-      android:gravity="center"
-      android:layout_height="wrap_content"
-      android:id="@+id/initText" />
-  <Space
-      android:layout_width="match_parent"
-      android:layout_height="0px"
-      android:layout_weight="20" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="20" />
+    <ImageView
+        android:src="@drawable/tatras_logo"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="30" />
+    <TextView
+        android:text="Pripaja sa..."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:id="@+id/initText" />
+    <Button
+        android:text="Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="20" />
 </LinearLayout>

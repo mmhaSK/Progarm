@@ -15,15 +15,17 @@ namespace App2
 
             base.OnCreate(bundle);
             SetContentView (Resource.Layout.Main);
+            Button button = FindViewById<Button>(Resource.Id.button1);
+            TextView text = FindViewById<TextView>(Resource.Id.initText);
+            button.Click += delegate
+            {
+                text.Text = "asdad";
+            };
             DoWorkAsync();
 
         }
 
 
-
-        public void zmenaTest() {
-
-        }
         async void DoWorkAsync()
         {
             await Task.Delay(5000);
