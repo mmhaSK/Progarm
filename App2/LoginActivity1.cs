@@ -19,6 +19,7 @@ namespace App2
         {
             base.OnCreate(savedInstanceState);
             base.SetContentView(Resource.Layout.Login);
+
             // Create your application here
         }
     }
