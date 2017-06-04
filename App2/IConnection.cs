@@ -14,7 +14,6 @@ namespace App2
 {
     interface IConnection
     {
-
         bool Connect();
         void WriteData(string data);
         string ReadData();
