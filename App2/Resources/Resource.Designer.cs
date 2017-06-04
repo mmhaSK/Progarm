@@ -45,19 +45,16 @@ namespace App2
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int beer = 2130837504;
+			public const int immacbytes = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int Icon = 2130837505;
+			public const int passwordd = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int metal = 2130837506;
+			public const int tatras_logo = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int tatras_logo = 2130837507;
-			
-			// aapt resource value: 0x7f020004
-			public const int wood = 2130837508;
+			public const int user = 2130837507;
 			
 			static Drawable()
 			{
@@ -73,19 +70,16 @@ namespace App2
 		{
 			
 			// aapt resource value: 0x7f050003
-			public const int btLogin = 2131034115;
-			
-			// aapt resource value: 0x7f050002
-			public const int editText2 = 2131034114;
-			
-			// aapt resource value: 0x7f050004
-			public const int initText = 2131034116;
-			
-			// aapt resource value: 0x7f050000
-			public const int linearLayout1 = 2131034112;
+			public const int initText = 2131034115;
 			
 			// aapt resource value: 0x7f050001
-			public const int textView1 = 2131034113;
+			public const int pswd = 2131034113;
+			
+			// aapt resource value: 0x7f050002
+			public const int sigin = 2131034114;
+			
+			// aapt resource value: 0x7f050000
+			public const int usrname = 2131034112;
 			
 			static Id()
 			{
@@ -101,13 +95,13 @@ namespace App2
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int ConnectionError = 2130903040;
+			public const int Login = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int Login = 2130903041;
+			public const int Main = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Main = 2130903042;
+			public const int ManagePage = 2130903042;
 			
 			static Layout()
 			{

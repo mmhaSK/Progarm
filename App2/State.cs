@@ -14,7 +14,7 @@ namespace App2
 {
     class State
     {
-        private bool okna { get; set; }
-        private bool rolety { get; set; }
+        public bool okna { get; set; }
+        public bool rolety { get; set; }
     }
 }

@@ -17,7 +17,8 @@ namespace App2
             base.OnCreate(bundle);
             SetContentView (Resource.Layout.Main);
             initText = FindViewById<TextView>(Resource.Id.initText);
-            Connection();
+            StartActivity(typeof(LoginActivity));
+            //Connection();
         }
 
         async void Connection()
@@ -49,23 +50,34 @@ namespace App2
             var parse = connection.ContinueWith((isConnected) => {
                 if (isConnected.Result == false)
                 {
-                    //Error
-                    return false;
+                    RunOnUiThread(() =>
+                    {
+                        ConnectionError();
+                    });
+                    return 2;
                 }
-
-                
-
-                return true; //dummy
+                return 0; //dummy parsovanie init 
             });
             // po sparsovani prepni view
             await parse.ContinueWith((x) => {
-                if (x.Result == false) {
-                    //Error
+                if (x.Result == 1) { // chyba parsovania nespravne data
+                    //uzatvorenie streamu
+                    ConnectionManager.GetInstance().Close();
+                    //zobrazenie chybovej hlasky
+                    RunOnUiThread(() => {
+                        ConnectionError();
+                    });
                     return;
                 }
+                else if (x.Result == 2) { // chyba pripojenia 
+                    //nic sa nevykona
+                    //chybova sprava uz je zobrazena
+                    return;
+                }
+                // korektny vysledok
                 //prepnutie aktivity
                 RunOnUiThread(() => {
-                    StartActivity(typeof(LoginActivity1));
+                    StartActivity(typeof(LoginActivity));
                 });
             });
         }
@@ -91,7 +103,15 @@ namespace App2
         }
 
         private void ConnectionError() {
-
+            AlertDialog.Builder alert = new AlertDialog.Builder(this);
+            alert.SetTitle("Nie je mozne sa pripojit");
+            alert.SetMessage("Skontrolujte bod pripojenia");
+            alert.SetPositiveButton("Skusit znova", (senderAlert, args) => {
+                //znovupripajanie
+                Connection();
+            });
+            Dialog dialog = alert.Create();
+            dialog.Show();
         }
     }
 }

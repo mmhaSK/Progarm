@@ -1,50 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:minWidth="25px"
-    android:minHeight="25px"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/linearLayout1"
-    android:background="#fff">
-    <Space
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:layout_weight="0.3" />
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:layout_weight="0.7">
-        <TextView
-            android:text="Prihlásenie"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_height="260dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:background="@drawable/immacbytes" />
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView1"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
-            android:paddingTop="30dp"
-            android:textSize="20pt"
-            android:textColor="#000" />
-        <EditText
-            android:inputType="textPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/editText2"
-            android:layout_marginTop="20dp"
-            android:hint="Heslo"
-            android:textColor="#B9B4B4"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:text="sdadasd" />
-        <Button
-            android:text="Prihlásiť"
-            android:background="#E53A34"
-            android:gravity="center"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/btLogin"
-            android:layout_marginTop="20dp" />
-    </LinearLayout>
+            android:orientation="horizontal"
+            android:layout_gravity="center|bottom"
+            android:background="#7d7d7d" />
+    </FrameLayout>
+    <EditText
+        android:id="@+id/usrname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Prihlasovanie meno"
+        android:inputType="text"
+        android:textColor="#000"
+        android:background="#f0f0f4"
+        android:padding="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:drawableLeft="@drawable/user"
+        android:drawablePadding="16dp" />
+    <EditText
+        android:id="@+id/pswd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Heslo"
+        android:inputType="textPassword"
+        android:background="#f0f0f4"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="12dp"
+        android:drawablePadding="16dp"
+        android:drawableLeft="@drawable/passwordd" />
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="#80000000"
+        android:padding="14dp"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:textColor="#fff"
+        android:text="Sign In"
+        android:id="@+id/sigin"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginBottom="5dp"
+        android:textAlignment="center" />
 </LinearLayout>
