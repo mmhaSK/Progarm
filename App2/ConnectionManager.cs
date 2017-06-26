@@ -65,5 +65,9 @@ namespace App2
         {
             stream.Close();
         }
+
+        public bool isOpen() {
+            return stream.CanRead && stream.CanWrite;
+        }
     }
 }
